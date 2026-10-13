@@ -1,106 +1,96 @@
-# Raspberry Pi Tabanlı Araç İçi Geri Görüş Kamera Sistemi
+# Raspberry Pi In-Vehicle Rear-View Camera System
 
-Bu proje, araç geri vitese alındığında navigasyon ekranından geri görüş kamerası görüntüsüne otomatik olarak geçiş yapabilen, Raspberry Pi tabanlı bir araç içi görüntüleme sistemi olarak geliştirilmiştir.
+This Raspberry Pi-based in-vehicle display system automatically switches from navigation to a rear-view camera feed when reverse gear is selected.
 
-Sistem, sürüş sırasında navigasyon işlevini destekleyen; geri manevra anında ise kamera görüntüsünü önceliklendirerek kullanıcıya daha güvenli ve işlevsel bir kullanım sunmayı amaçlayan bir yapı üzerine kurulmuştur.
+During normal driving, the display supports navigation. When the vehicle is reversing, the camera view takes priority to provide a more useful view behind the vehicle.
 
-## Proje Özeti
+## Project Overview
 
-Bu çalışmada, araç içi kullanım senaryosuna uygun bir geri görüş kamera sistemi tasarlanmıştır. Sistem içerisinde Raspberry Pi ana işlem birimi olarak kullanılmış, Raspberry Pi uyumlu kamera modülü ile canlı görüntü alınmış ve geri vites bilgisine bağlı olarak ekran içeriği dinamik şekilde değiştirilmiştir.
+The system uses a Raspberry Pi as its main processing unit and a compatible camera module to capture live video. The display changes according to the reverse-gear signal.
 
-Normal kullanımda navigasyon ekranı aktif durumda çalışırken, araç geri vitese geçirildiğinde sistem otomatik olarak kamera görüntüsünü ekrana yansıtmakta; böylece sürücü geri manevra sırasında arka görüşü doğrudan izleyebilmektedir.
+In normal operation, the navigation screen is active. When reverse is selected, the system automatically displays the camera feed so the driver can see behind the vehicle while maneuvering.
 
-## Projenin Amacı
+## Project Goals
 
-Bu projenin temel amacı aşağıdaki alanlarda uygulamalı deneyim kazanmaktır:
+- Develop a Raspberry Pi-based embedded system
+- Integrate a camera module
+- Create a display system for an in-vehicle use case
+- Switch automatically between operating modes
+- Combine hardware and software around a practical use case
 
-- Raspberry Pi tabanlı gömülü sistem geliştirme
-- Kamera modülü entegrasyonu
-- Araç içi ekran senaryolarına uygun görüntüleme sistemi oluşturma
-- Farklı çalışma modları arasında otomatik geçiş mantığı geliştirme
-- Gerçek kullanım odaklı elektronik ve yazılım entegrasyonu sağlama
+## Operating Modes
 
-## Sistem Çalışma Mantığı
+### Navigation Mode
 
-Sistem iki temel çalışma moduna sahiptir:
+During normal driving, the display shows the navigation interface.
 
-### Navigasyon Modu
-Araç normal sürüş durumundayken ekranda navigasyon arayüzü görüntülenmektedir.
+### Rear-View Mode
 
-### Geri Görüş Modu
-Araç geri vitese geçirildiğinde sistem ilgili sinyali algılamakta ve ekran içeriğini otomatik olarak değiştirerek geri görüş kamerası görüntüsünü göstermektedir.
+When reverse gear is selected, the system detects the relevant signal and automatically switches the display to the live rear-view camera feed.
 
-Bu sayede sürücünün manuel olarak ekran değiştirmesine gerek kalmadan, kullanım senaryosuna uygun görüntü otomatik olarak sunulmaktadır.
+This removes the need for the driver to switch the display manually.
 
-## Sistem Bileşenleri
-
-Projede yer alan temel bileşenler aşağıdaki gibidir:
+## Main Components
 
 - Raspberry Pi
-- Raspberry Pi uyumlu kamera modülü
-- Araç içi ekran / görüntüleme altyapısı
-- Geri vites tetikleme mantığı
-- Görüntü geçiş kontrol yazılımı
-- Güç bağlantı ve sistem entegrasyon yapısı
+- Raspberry Pi-compatible camera module
+- In-vehicle display
+- Reverse-gear trigger signal
+- Display switching software
+- Power and system connections
 
-## Gerçekleştirilen Çalışmalar
+## Work Completed
 
-- Raspberry Pi tabanlı sistem mimarisi oluşturuldu
-- Uyumlu kamera modülü sisteme entegre edildi
-- Canlı görüntü alma yapısı kuruldu
-- Navigasyon ve kamera görüntüsü arasında geçiş senaryosu tasarlandı
-- Geri vitese bağlı otomatik ekran geçiş mantığı oluşturuldu
-- Araç içi kullanım senaryosuna uygun test yapısı planlandı
+- Designed the Raspberry Pi-based system architecture
+- Integrated a compatible camera module
+- Set up live video capture
+- Planned the transition between navigation and camera views
+- Implemented the reverse-triggered display switching logic
+- Planned a test setup for the in-vehicle use case
 
-## Kullanılan Teknolojiler ve Araçlar
+## Technologies and Tools
 
 - Raspberry Pi
-- Raspberry Pi kamera modülü
-- Gömülü Linux tabanlı çalışma yapısı
-- Görüntüleme ve arayüz kontrol mantığı
-- Araç içi entegrasyona uygun bağlantı yapısı
+- Raspberry Pi camera module
+- Embedded Linux
+- Display and interface-control logic
+- In-vehicle integration connections
 
-## Teknik Kazanımlar
+## Skills Applied
 
-Bu proje kapsamında aşağıdaki alanlarda uygulamalı deneyim kazanılmıştır:
+- Camera-based embedded systems
+- Real-time video capture
+- Scenario-based interface switching
+- Hardware-software integration
+- Automotive electronics system design
 
-- Kamera tabanlı gömülü sistem geliştirme
-- Gerçek zamanlı görüntü alma
-- Kullanım senaryosuna bağlı arayüz geçiş mantığı oluşturma
-- Donanım ve yazılım entegrasyonu
-- Araç elektroniğine yönelik sistem düşüncesi geliştirme
+## Potential Applications
 
-## Uygulama Alanları
+- In-vehicle rear-view camera systems
+- Smart vehicle displays
+- Vision-based driving assistance
+- Raspberry Pi automotive prototypes
 
-Bu proje yapısı aşağıdaki uygulamalara uyarlanabilecek altyapıya sahiptir:
+## Project Photos
 
-- Araç içi geri görüş sistemleri
-- Akıllı araç ekran çözümleri
-- Görüntü tabanlı sürüş destek sistemleri
-- Raspberry Pi tabanlı otomotiv prototipleri
+![System overview](images/sistem-gorunumu.png)
 
-## Proje Görselleri
+![Camera module](images/kamera-modulu.png)
 
-![Sistem Görünümü](images/sistem-gorunumu.png)
+![Display interface](images/ekran-arayuzu.png)
 
-![Kamera Modülü](images/kamera-modulu.png)
+![Rear-view mode](images/geri-gorus-modu.png)
 
-![Ekran Arayüzü](images/ekran-arayuzu.png)
+## Possible Extensions
 
-![Geri Görüş Modu](images/geri-gorus-modu.png)
+- Improve low-light performance
+- Make screen switching faster
+- Add parking guide lines
+- Design a more compact enclosure
+- Add video recording
+- Integrate a wireless camera
+- Build a more advanced in-vehicle multimedia interface
 
-## Geliştirme Potansiyeli
+## Summary
 
-Bu proje aşağıdaki yönlerden geliştirilebilir:
-
-- Gece görüş performansının iyileştirilmesi
-- Daha hızlı ekran geçiş mekanizması
-- Park yardımcı çizgilerinin eklenmesi
-- Daha kompakt muhafaza tasarımı
-- Kayıt alma özelliği
-- Kablosuz kamera entegrasyonu
-- Daha gelişmiş araç içi multimedya arayüzü
-
-## Sonuç
-
-Bu proje, araç içi görüntüleme ve sürüş destek senaryoları için işlevsel bir Raspberry Pi uygulamasıdır. Navigasyon ekranı ile geri görüş kamerası arasında otomatik geçiş yapabilmesi, projeyi yalnızca temel bir kamera entegrasyonu olmaktan çıkarıp gerçek kullanım senaryosuna yakın bir sistem haline getirmektedir. Donanım-yazılım entegrasyonu, kullanım mantığı ve otomotiv odaklı düşünce yapısı açısından güçlü bir uygulama çalışmasıdır.
+This project is a Raspberry Pi application for in-vehicle display and driver-assistance use cases. Its automatic transition between navigation and rear-view camera modes makes it a practical example of hardware-software integration for automotive applications.
